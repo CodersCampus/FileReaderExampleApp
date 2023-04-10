@@ -1,0 +1,21 @@
+Student ID,Student Name,Student Birthdate
+1001,John Smith,2002-01-01
+1002,Jane Doe,2001-03-15
+1003,Robert Johnson,2000-07-20
+1004,Samantha Lee,1999-05-02
+1005,Michael Kim,1998-11-30
+1006,Emily Chen,2003-02-18
+1007,William Davis,2004-04-10
+1008,Sophia Hernandez,2005-06-25
+1009,David Rodriguez,2006-09-11
+1010,Isabella Nguyen,2007-11-05
+1011,Alexander Martin,2008-01-21
+1012,Avery Wilson,2009-03-08
+1013,Mason Brown,2010-05-02
+1014,Emma Taylor,2011-07-14
+1015,Oliver Thompson,2012-09-18
+1016,Chloe Lewis,2013-11-21
+1017,Lucas Turner,2014-01-25
+1018,Mia Scott,2015-03-28
+1019,Noah Wright,2016-06-02
+1020,Grace Baker,2017-08-09
