@@ -5,6 +5,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 
+import com.coderscampus.domain.Student;
+
 public class FileService {
 	
 	private static FileService fileService = null;
@@ -27,6 +29,16 @@ public class FileService {
 			ArrayList<String> data = (ArrayList<String>) Files.readAllLines(path);
 			
 			// Step 2: do something useful with the data
+			data.stream()
+				.forEach((String lineOfData) -> {
+					Student student = new Student();
+					String[] studentData = lineOfData.split(",");
+					// studentData = 3 "boxes / buckets / nodes" of data
+					// i.e. [1001, John Smith, 2002-01-01]
+					student.setId(studentData[0]); // studentId
+					studentData[1]; // studentName
+					studentData[2]; // studentBirthdate
+				});
 			
 			// Step 3: Output the data
 			for ( int i = 0; i < data.size(); i++ ) {
