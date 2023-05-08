@@ -19,7 +19,13 @@ public class FileService {
 		return fileService;
 	}
 	
-	public void printFileContentsToConsole (Path path) throws IOException {
-		System.out.println( Files.readAllLines(path) );
+	public void printFileContentsToConsole (Path path) {
+		try {
+			
+			System.out.println( Files.readAllLines(path) );
+		} catch (IOException e) {
+			System.out.println("Oops, there was a problem reading the file");
+			e.printStackTrace();
+		}
 	}
 }

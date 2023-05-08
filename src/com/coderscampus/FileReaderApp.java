@@ -7,7 +7,7 @@ import com.coderscampus.service.FileService;
 
 public class FileReaderApp {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 		FileService fileService = FileService.getInstance();
 		
 		fileService.printFileContentsToConsole(Path.of("sample-data.txt"));
