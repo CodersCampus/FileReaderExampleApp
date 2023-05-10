@@ -9,16 +9,22 @@ import com.coderscampus.domain.Student;
 public class StudentService {
 
 	public void printListOfBirthdays (List<Student> students) {
-		students.stream()
-			    .forEach(student -> {
-			    	String todaysDate = LocalDate.now()
-			    	         					 .format(DateTimeFormatter.ofPattern("MM-DD"));
-			    	
-			    	String studentBirthdate = student.getBirthdate()
-			    									 .format(DateTimeFormatter.ofPattern("MM-DD"));
-			    	
-			    	if (todaysDate.equals(studentBirthdate))
-			    		System.out.println("Happy Birthday " + student.getName());
-			    });
+		boolean weHaveABirthday = false;
+		for ( Student student : students ) {
+			String todaysDate = LocalDate.now()
+								 .format(DateTimeFormatter.ofPattern("MM-dd"));
+			
+			String studentBirthdate = student.getBirthdate()
+									 .format(DateTimeFormatter.ofPattern("MM-dd"));
+			
+			if (todaysDate.equals(studentBirthdate)) { 
+				System.out.println("Happy Birthday " + student.getName());
+				weHaveABirthday = true;
+			}
+		}
+		
+		if (!weHaveABirthday) {
+			System.out.println("No birthdays today");
+		}
 	}
 }
